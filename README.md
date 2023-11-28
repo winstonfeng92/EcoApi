@@ -17,5 +17,5 @@ Django
 FuzzyWuzzy Python Library
 Python-Levenshtein (optional for performance improvement)
 
-
+Deployed API:
 https://python-eco.fly.dev/items
