@@ -16,3 +16,6 @@ Python
 Django
 FuzzyWuzzy Python Library
 Python-Levenshtein (optional for performance improvement)
+
+
+https://python-eco.fly.dev/items
