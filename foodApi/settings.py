@@ -26,11 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-di%#px(&q)7hbkr1*(!ehamo%!t6r1b2_seqnl*@++3qqa_&6n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
-ALLOWED_HOSTS = ['python-eco.fly.dev', 'www.python-eco.fly.dev']
-CSRF_COOKIE_DOMAIN = '.fly.dev'
-CSRF_TRUSTED_ORIGINS = ['http://*.fly.dev', 'https://*.fly.dev']
+ALLOWED_HOSTS = ['python-eco.fly.dev', 'www.python-eco.fly.dev', 'localhost']
+# CSRF_COOKIE_DOMAIN = ['.fly.dev', 'localhost', '.localhost:8000', 'localhost:8000','.localhost']
+CSRF_TRUSTED_ORIGINS = ['http://*.fly.dev', 'https://*.fly.dev', 'http://localhost','http://localhost:8000','https://localhost',]
+CSRF_COOKIE_DOMAIN = None
 
 
 

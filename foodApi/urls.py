@@ -22,7 +22,7 @@ from foodApi.backend.views import *  # Import the view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/', hello_world, name='hello_world'),  # Map the view to a URL,
-    path('', hello_world, name='hello_world'),  # Map the view to a URL,
+    path('', showItemDetails, name='hello_world'),  # Map the view to a URL,
     path('items', showItemDetails, name='show_items'),  # Map the view to a URL,
     path('items/<str:name>/', match_product, name='match_product'),
 ]
