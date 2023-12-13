@@ -4,6 +4,16 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from fuzzywuzzy import process
 
+from rest_framework import viewsets
+from .models import FoodItem
+from .serializers import FoodItemSerializer
+
+class FoodItemViewSet(viewsets.ModelViewSet):
+    queryset = FoodItem.objects.all()
+    serializer_class = FoodItemSerializer
+
+    
+
 def hello_world(request):
     return HttpResponse("Hello, world!")
 

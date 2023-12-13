@@ -15,9 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from foodApi.backend.views import *  # Import the view
+from django.urls import path,include
+from backend.views import *  # Import the view
+from backend.views import FoodItemViewSet
+from rest_framework.routers import DefaultRouter
 
+router = DefaultRouter()
+router.register(r'fooditems', FoodItemViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +29,8 @@ urlpatterns = [
     path('', showItemDetails, name='hello_world'),  # Map the view to a URL,
     path('items', showItemDetails, name='show_items'),  # Map the view to a URL,
     path('items/<str:name>/', match_product, name='match_product'),
+    path('api/', include(router.urls)),
+
 ]
 
 
